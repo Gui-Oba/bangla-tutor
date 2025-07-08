@@ -5,28 +5,32 @@ import Logo from '../assets/Logo.svg'; // Adjust the path as necessary
 export default function Header() {
   return (
     <header className="bg-white">
-      <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
-        {/* Left: Logo + Name */}
-        <div className="flex items-center space-x-2 group">
-          {/* Logo */}
-          <img src={Logo} alt="BridgeAI Logo" className="h-10 w-10" />
+  <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
+    <div className="flex lg:flex-1">
+      <a href="#" className="flex flex-row items-center gap-2 font-semibold -m-1.5 p-1.5">
+        <span className="sr-only">Your Company</span>
+        <img className="h-8 w-auto" src={Logo} alt="" />
+        BridgeAI
+      </a>
+    </div>
+    <div className="flex lg:hidden">
+      <button type="button" className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700">
+        <span className="sr-only">Open main menu</span>
+
+      </button>
+    </div>
+    <div className="hidden lg:flex lg:gap-x-12">
 
 
-          {/* Name wrapper */}
-          <span className="relative inline-grid  text-2xl font-bold leading-none text-gray-800 ">
-            {/* Original text */}
-              BridgeAI
-            </span>
-        </div>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Lessons</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Exercises</a>
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Quizzes</a>
+    </div>
+    <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+      <a href="#" className="text-sm/6 font-semibold text-gray-900">Log in <span aria-hidden="true">&rarr;</span></a>
+    </div>
+  </nav>
 
-        {/* Right: Date */}
-        <div className=" items-center justify-items-center  mt-4 md:mt-0">
-          <div className="mt-2 md:mt-0 text-center md:text-right">
-            {new Date().getFullYear()} {new Date().getMonth() + 1}{' '}
-            {new Date().getDate()}
-          </div>
-        </div>    
-      </div>
-    </header>
+</header>
   );
 }

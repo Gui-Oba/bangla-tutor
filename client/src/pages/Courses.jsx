@@ -1,9 +1,8 @@
 import '../App.css'; // Ensure styles are applied
 
 import Header from '../components/Header';
-import QuestionBox from '../components/QuestionBox';
 
-export default function Home() {
+export default function Courses() {
   return (
 
     
@@ -21,13 +20,19 @@ export default function Home() {
         >
           {/* This ensures title is always centered, with the projects outside of view */}
           <div className="-translate-y-[8vh] sm:-translate-y-[6vh] lg:-translate-y-[10vh] px-6 text-center">
-            <h1 className="flex items-center text-5xl mb-6 justify-center">
+            <h1 className="flex items-center text-6xl mb-6 justify-center">
               Your Personal AI Tutor
             </h1>
-            <QuestionBox />
+            <textarea className="w-full max-w-2xl p-4 text-lg bg-gray-100 font-light rounded-4xl shadow-md placeholder:text-gray-500" placeholder="Enter your question here...">
+            </textarea>
 
           </div>
         </section>
+
+
+
+
+
       </main>
 
       {/* Footer */}
