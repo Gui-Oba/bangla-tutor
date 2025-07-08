@@ -1,14 +1,14 @@
 import '../App.css'; // Ensure styles are applied
-
 import Header from '../components/Header';
+import Footer from '../components/Footer';
 import QuestionBox from '../components/QuestionBox';
 
 export default function Home() {
   return (
 
-    
+
     <div className="min-h-screen flex flex-col bg-white">
-      
+
       <Header />
 
       {/* Main Content */}
@@ -29,13 +29,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-
-      {/* Footer */}
-      <footer className="bg-white mt-auto">
-        <div className="container mx-auto px-6 py-6 text-center text-gray-500 text-sm">
-          © {new Date().getFullYear()} BridgeAI. All rights reserved.
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

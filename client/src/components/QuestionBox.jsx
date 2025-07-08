@@ -19,11 +19,11 @@ export default function QuestionBox({ onSubmit }) {
 
   return (
     <motion.section
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       className="w-full max-w-xl mx-auto p-4 sm:p-6 rounded-2xl bg-white/90 backdrop-blur-md"
     >
-      <form onSubmit={handleSubmit} className="flex çflex-col gap-4">
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4">
 
         <textarea
           id="question"
