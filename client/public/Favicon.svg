@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" width="160" height="160">
+	<title>BanglaTutor</title>
+	<defs>
+		<image  width="140" height="110" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAABuBAMAAAAHYuaEAAAAAXNSR0IB2cksfwAAAA9QTFRFAAAA/0j+/9YwXeosf+FceMIgJAAAAAV0Uk5TAP///wAx0snfAAAAi0lEQVR4nO3YsQ3AIAxEURiBFVghK2R9VmAFVojSWEIyljuu+FcgWzavpKCWMM2qFe5VGBgJpu2T5TDeCgyMLpMIDIwGE19OP+kwMIqMNzhaMDA3meOVLLNgYCSYhHUUCgyMBPNYP51tL92qAQMjxiSsvrcwMBqMZyUyrIKB0WDe/4h/NDwBBuY28wFB4bXDHDgyPAAAAABJRU5ErkJggg=="/>
+	</defs>
+	<style>
+	</style>
+	<use id="Layer 1" href="#img1" x="10" y="20"/>
+</svg>
