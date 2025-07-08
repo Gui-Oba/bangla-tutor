@@ -23,6 +23,9 @@ export default function Home() {
             <h1 className="flex items-center text-6xl mb-6 justify-center">
               Your Personal AI Tutor
             </h1>
+            <textarea className="w-full max-w-2xl p-4 text-lg bg-gray-100 font-light rounded-4xl shadow-md placeholder:text-gray-500" placeholder="Enter your question here...">
+            </textarea>
+
           </div>
         </section>
 

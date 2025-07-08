@@ -1,4 +1,5 @@
 import '../App.css'; // Ensure styles are applied
+import Logo from '../assets/Logo.svg'; // Adjust the path as necessary
 
 
 export default function Header() {
@@ -7,6 +8,8 @@ export default function Header() {
       <div className="container mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between">
         {/* Left: Logo + Name */}
         <div className="flex items-center space-x-2 group">
+          {/* Logo */}
+          <img src={Logo} alt="BridgeAI Logo" className="h-10 w-10" />
 
 
           {/* Name wrapper */}
