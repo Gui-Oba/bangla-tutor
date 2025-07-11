@@ -17,7 +17,7 @@ export default function Home() {
     setCurrentStepIndex(0); // Reset to first step
 
     try {
-      const response = await fetch('http://localhost:5000/api/teach', { // Assuming backend runs on port 5000
+      const response = await fetch('http://localhost:5000/api/teach', { 
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -62,9 +62,9 @@ export default function Home() {
       <main className="flex-grow">
         <section
           id="about"
-          className="relative flex items-center justify-center h-screen  bg-white text-black"
+          className="relative flex items-center justify-center min-h-screen py-12 bg-white text-black"
         >
-          <div className="-translate-y-[8vh] sm:-translate-y-[6vh] lg:-translate-y-[10vh] px-6 text-center">
+          <div className="px-6 text-center max-w-4xl w-full">
             <h1 className="flex items-center text-5xl mb-6 justify-center">
               Your Personal AI Tutor
             </h1>
