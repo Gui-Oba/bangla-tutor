@@ -34,8 +34,12 @@ export default function QuestionBox({ onSubmit }) {
           rows={4}
           className="w-full resize-none rounded-2xl border bg-gray-100 border-gray-300 focus:outline-none p-3 font-light text-gray-900 shadow-inner"
         />
-
-
+        <button
+          type="submit"
+          className="px-6 py-3 bg-blue-600 text-white rounded-xl shadow-lg hover:bg-blue-700 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50"
+        >
+          Ask AI Tutor
+        </button>
       </form>
     </motion.section>
   );
