@@ -17,7 +17,7 @@ export default function Home() {
     setCurrentStepIndex(0); // Reset to first step
 
     try {
-      const response = await fetch('http://localhost:5000/api/teach', { 
+      const response = await fetch('/api/teach', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
