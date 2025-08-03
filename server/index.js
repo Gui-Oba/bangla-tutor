@@ -6,11 +6,15 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+console.log("Serverless function initializing...");
+
 app.use(cors());
 app.use(express.json());
 
 // Initialize Gemini API
+console.log("Initializing GoogleGenerativeAI...");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+console.log("GoogleGenerativeAI initialized.");
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"}); // Using gemini-2.5-flash for text generation
 
 app.get('/', (req, res) => {
@@ -18,6 +22,7 @@ app.get('/', (req, res) => {
 });
 
 app.post('/api/teach', async (req, res) => {
+  console.log("Received request for /api/teach");
   const { query, context } = req.body;
 
   if (!query) {
@@ -116,7 +121,12 @@ app.post('/api/teach', async (req, res) => {
     });
 
   } catch (error) {
+    console.error('--- DETAILED ERROR ---');
     console.error('Error generating teaching plan:', error);
+    console.error('Error Name:', error.name);
+    console.error('Error Message:', error.message);
+    console.error('Error Stack:', error.stack);
+    console.error('--- END DETAILED ERROR ---');
     res.status(500).json({ success: false, message: 'Failed to generate teaching plan.', error: error.message });
   }
 });
