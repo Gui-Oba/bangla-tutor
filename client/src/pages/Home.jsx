@@ -17,7 +17,7 @@ export default function Home() {
     setCurrentStepIndex(0); // Reset to first step
 
     try {
-      const res = await fetch('/api/teach', {
+      const response = await fetch('/api/teach', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -25,12 +25,12 @@ export default function Home() {
         body: JSON.stringify({ query: question }),
       });
 
-      if (!res.ok) {
-        const errorData = await res.json();
+      if (!response.ok) {
+        const errorData = await response.json();
         throw new Error(errorData.message || 'Failed to fetch teaching plan');
       }
 
-      const data = await res.json();
+      const data = await response.json();
       if (data.success) {
         setTeachingPlan(data.plan);
       } else {
