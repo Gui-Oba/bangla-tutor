@@ -11,7 +11,7 @@ export default function Header() {
           <a href="#" className="flex flex-row items-center gap-2 font-semibold -m-1.5 p-1.5">
             <span className="sr-only">Your Company</span>
             <img className="h-8 w-auto" src={Logo} alt="" />
-            <Link to="/" className="text-sm/6 text-xl font-semibold text-gray-900">BridgeAI</Link>
+            <Link to="/" className=" text-xl font-semibold text-gray-900">BridgeAI</Link>
 
           </a>
         </div>
