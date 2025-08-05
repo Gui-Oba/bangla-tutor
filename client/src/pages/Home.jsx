@@ -26,7 +26,7 @@ export default function Home() {
       });
 
       if (!res.ok) {
-        const errorData = await response.json();
+        const errorData = await res.json();
         throw new Error(errorData.message || 'Failed to fetch teaching plan');
       }
 
