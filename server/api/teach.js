@@ -10,7 +10,7 @@ app.use(express.json());
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" });
 
-app.post('/api/teach', async (req, res) => {
+app.post('/teach', async (req, res) => {
   const { query, context } = req.body;
   if (!query) return res.status(400).json({ success: false, message: 'Query is required.' });
 
