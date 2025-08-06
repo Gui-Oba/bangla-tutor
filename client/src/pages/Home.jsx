@@ -22,8 +22,9 @@ export default function Home() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ query: question }),
+        body: JSON.stringify({ query: yourPrompt }),
       });
+
 
       if (!response.ok) {
         const errorData = await response.json();
