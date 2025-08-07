@@ -17,13 +17,12 @@ export default function Home() {
     setCurrentStepIndex(0); // Reset to first step
 
     try {
-      const response = await fetch('/api/teach', {
+      const response = await fetch('http://35.203.123.45:3000/api/teach', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({ query: question }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ query: question })
       });
+
 
       if (!response.ok) {
         const errorData = await response.json();
