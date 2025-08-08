@@ -17,10 +17,10 @@ export default function Home() {
     setCurrentStepIndex(0); // Reset to first step
 
     try {
-      const response = await fetch('http://35.203.123.45:3000/api/teach', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/api/teach`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query: question })
+        body: JSON.stringify({ query })
       });
 
 
