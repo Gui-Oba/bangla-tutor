@@ -20,7 +20,7 @@ export default function Home() {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/api/teach`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ query })
+        body: JSON.stringify({ query: question })
       });
 
 
