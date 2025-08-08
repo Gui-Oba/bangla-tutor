@@ -6,6 +6,21 @@ const { GoogleGenerativeAI } = require('@google/generative-ai');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+const allowed = [
+  'https://kaviai.org',
+  'https://www.kaviai.org',
+  // optional: your Vercel preview URL
+  'https://bridge-ai-blond.vercel.app'
+];
+
+app.use(cors({
+  origin: (origin, cb) => {
+    if (!origin || allowed.includes(origin)) return cb(null, true);
+    cb(new Error('Not allowed by CORS'));
+  }
+}));
+
+
 console.log("Serverless function initializing...");
 
 app.use(cors());
@@ -15,7 +30,7 @@ app.use(express.json());
 console.log("Initializing GoogleGenerativeAI...");
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 console.log("GoogleGenerativeAI initialized.");
-const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash"}); // Using gemini-2.5-flash for text generation
+const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash" }); // Using gemini-2.5-flash for text generation
 
 app.get('/', (req, res) => {
   res.send('AI Tutor Backend is running!');
